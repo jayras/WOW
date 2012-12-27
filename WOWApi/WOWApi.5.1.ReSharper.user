@@ -1,0 +1,34 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="129" fromTop="7" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:WOWAPIException.cs" caret="264" fromTop="13" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="2019" fromTop="55" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="0" fromTop="0" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="125" fromTop="5" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="210" fromTop="11" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:WOWAPIException.cs" caret="1761" fromTop="55" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:WOWAPIException.cs" caret="161" fromTop="7" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
