@@ -7,8 +7,14 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="177" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="554" fromTop="25" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="2091" fromTop="46" />
+      <File id="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A/f:APIConnectcor.cs" caret="196" fromTop="12" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />

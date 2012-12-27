@@ -9,23 +9,24 @@ namespace WOWApi
 {
     class APIConnectcor
     {
-        class APIConnector
+        internal class APIConnector
         {
             public string Region { get; set; }
-            public string BaseURI
+            public string HostName
             {
-                get { return GetURIFromRegion(Region); }
+                get { return GetHostNameFromRegion(Region); }
             }
 
-            public APIConnector()
+            public APIConnector(string region)
             {
-
+                Region = region;
             }
 
 
             public string GetResponse(string uri)
             {
-                HttpWebRequest request = WebRequest.Create(uri) as HttpWebRequest;
+                UriBuilder build = new UriBuilder("http",HostName,80,uri);
+                HttpWebRequest request = WebRequest.Create(build.Uri) as HttpWebRequest;
 
                 if (request == null)
                 {
@@ -40,9 +41,12 @@ namespace WOWApi
                 {
                     using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                     {
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                        if (response != null)
                         {
-                            result = reader.ReadToEnd();
+                            using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                            {
+                                result = reader.ReadToEnd();
+                            }
                         }
                     }
                 }
@@ -50,22 +54,49 @@ namespace WOWApi
                 {
                     HttpWebResponse response = e.Response as HttpWebResponse;
                     WebExceptionStatus s = e.Status;
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                    if (response != null)
                     {
-                        result = reader.ReadToEnd();
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                        {
+                            result = reader.ReadToEnd();
+                        }
+                        throw new WOWAPIException((int)response.StatusCode, result, e);
                     }
-                    throw new WOWAPIException((int)response.StatusCode, result, e);
-
                 }
 
                 return result;
             }
 
-            private string GetURIFromRegion(string region)
+            private static string GetHostNameFromRegion(string region)
             {
-                throw new NotImplementedException();
+                switch (region)
+                {
+                    case "en_US":
+                    case "es_MX":
+                    case "pt_BR":
+                        return "us.battle.net";
+                    case "en_GB":
+                    case "es_ES":
+                    case "fr_FR":
+                    case "ru_RU":
+                    case "de_DE":
+                    case "pt_PT":
+                    case "it_IT":
+                        return "eu.battle.net";
+                    case "ko_KR":
+                        return "kr.battle.net";
+                    case "zh_TW":
+                        return "tw.battle.net";
+                    case "zh_CN":
+                        return "www.battlenet.com.cn";
+                    default:
+                        return "us.battle.net";
+
+                }
             }
 
         }
     }
+
+
 }

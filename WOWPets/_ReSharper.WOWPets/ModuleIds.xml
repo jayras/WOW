@@ -1,3 +1,4 @@
 <Modules>
   <Module PersistentId="E9BBC2B1-69E0-460A-9797-C12F31AA48BD" ModuleId="WOWPets" />
+  <Module PersistentId="A951D0EE-DB97-4B7D-94F0-AFBDAF5B790A" ModuleId="WOWApi" />
 </Modules>

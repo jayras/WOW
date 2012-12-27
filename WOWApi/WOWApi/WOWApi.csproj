@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AchievementAPI.cs" />
+    <Compile Include="AchievementCriteria.cs" />
+    <Compile Include="AchievementRewardItems.cs" />
     <Compile Include="APIConnectcor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WOWAPIException.cs" />
